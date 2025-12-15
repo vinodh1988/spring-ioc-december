@@ -2,6 +2,7 @@ package com.iocapp.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 import com.iocapp.system.Activity;
 import com.iocapp.system.DigitalDocumenting;
@@ -15,11 +16,13 @@ public class CentralConfig {
 	} // runs automatically everytime object is created
 	
 	@Bean(name="simpledoc")
+	@Scope("prototype")
 	public Activity document() {
 		return new Documenting();
 	}//it will run everytime you ask for object because as of now its singleton
 
 	@Bean(name="digidoc")
+	@Scope("prototype")
 	public Activity DigitalDocumenting() {
 		return new DigitalDocumenting();
 	}

@@ -18,8 +18,23 @@ public class FirstIocDemoApplication {
 	
 	Activity obj=(Activity)ac.getBean("simpledoc");
 	obj.task();
+	System.out.println(obj.hashCode());
+	obj=(Activity)ac.getBean("simpledoc");
+	obj.task();
+	System.out.println(obj.hashCode());
+	obj.task();
+	System.out.println(obj.hashCode());
+	
+	obj=(Activity)ac.getBean("simpledoc");
 	obj=(Activity)ac.getBean("digidoc");
 	obj.task();
+	System.out.println(obj.hashCode());
+	obj=(Activity)ac.getBean("digidoc");
+	obj.task();
+	obj=(Activity)ac.getBean("digidoc");
+	System.out.println(obj.hashCode());
+	obj.task();
+	System.out.println(obj.hashCode());
 	}
 
 }

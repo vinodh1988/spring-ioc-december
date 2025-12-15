@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.iocapp.system.Activity;
+
 @SpringBootApplication
 public class FirstIocDemoApplication {
 
@@ -13,6 +15,11 @@ public class FirstIocDemoApplication {
 	ApplicationContext ac=	SpringApplication.run(FirstIocDemoApplication.class, args);
 	System.out.println(ac.getId());
 	System.out.println("Code finished");
+	
+	Activity obj=(Activity)ac.getBean("simpledoc");
+	obj.task();
+	obj=(Activity)ac.getBean("digidoc");
+	obj.task();
 	}
 
 }

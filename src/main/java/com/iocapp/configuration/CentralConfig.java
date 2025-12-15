@@ -17,7 +17,7 @@ public class CentralConfig {
 	@Bean(name="simpledoc")
 	public Activity document() {
 		return new Documenting();
-	}
+	}//it will run everytime you ask for object because as of now its singleton
 
 	@Bean(name="digidoc")
 	public Activity DigitalDocumenting() {

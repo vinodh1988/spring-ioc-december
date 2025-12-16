@@ -7,10 +7,10 @@ import com.iocapp.system.ProcessX;
 
 public class Integrator {
   @Autowired
-  @Qualifier("read")
+ // @Qualifier("read")
   private ProcessX x; 
   @Autowired
-  @Qualifier("write")
+ // @Qualifier("write")
   private ProcessX y;//Autowiring by name
   // this is only reference (null by default)
             //but spring ioc injects object if it finds anything appropriate

@@ -1,8 +1,10 @@
 package com.iocapp.system2;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
+@Order(1)
 public class Planning implements AutomatedTask {
 
 	@Override

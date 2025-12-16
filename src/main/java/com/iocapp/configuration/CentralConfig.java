@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+import com.iocapp.integration.Integrator;
 import com.iocapp.system.Activity;
 import com.iocapp.system.DigitalDocumenting;
 import com.iocapp.system.Documenting;
@@ -26,5 +27,13 @@ public class CentralConfig {
 	public Activity DigitalDocumenting() {
 		return new DigitalDocumenting();
 	}
+	
+	@Bean(name="integrate")
+	public Integrator getint() {
+		return new Integrator();
+	}
+	
+	
 }
+
 

@@ -3,9 +3,8 @@ package com.iocapp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
-import com.iocapp.system.Activity;
+import com.iocapp.integration.Integrator;
 
 @SpringBootApplication
 public class FirstIocDemoApplication {
@@ -14,7 +13,9 @@ public class FirstIocDemoApplication {
 	  //you dont need to create application context
 		// the below line will create it
 	ApplicationContext ac=	SpringApplication.run(FirstIocDemoApplication.class, args);
-	System.out.println(ac.getId());
+	Integrator i=(Integrator)ac.getBean("integrate");
+	i.doTask();
+	/*System.out.println(ac.getId());
 	System.out.println("Code finished");
 	
 	Activity obj=(Activity)ac.getBean("simpledoc");
@@ -37,7 +38,7 @@ public class FirstIocDemoApplication {
 	System.out.println(obj.hashCode());
 	obj=(Activity)ac.getBean("digidoc");
 	obj.task();
-	System.out.println(obj.hashCode());
+	System.out.println(obj.hashCode())*/
 	}
 
 }

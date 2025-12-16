@@ -2,7 +2,7 @@ package com.iocapp.system;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("write")
 public class WriteData implements ProcessX {
 
 	@Override

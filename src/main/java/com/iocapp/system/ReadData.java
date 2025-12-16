@@ -2,7 +2,7 @@ package com.iocapp.system;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("read")
 public class ReadData implements ProcessX {
 	{
 		System.out.println("ReadData Intiated");

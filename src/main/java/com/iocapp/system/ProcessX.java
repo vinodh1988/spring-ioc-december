@@ -1,5 +1,5 @@
 package com.iocapp.system;
 
-public interface Process {
+public interface ProcessX {
   public void perform();
 }
